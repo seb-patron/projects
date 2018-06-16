@@ -3,8 +3,8 @@
 <html lang="en">
   {% include _head.html %}
 <header class="pv5 pv6-ns">
-     <h1 class="mt0 ptl tc f6 f3-ns fw9 dark-gr⬆︎ay">
-          <span class="fw1">LOOK ⬆︎ PRAGUE</span>
+     <h1 class="mt0 ptl tc f6 f3-ns fw9 dark-gray">
+          <span class="fw1">LOOK ⬆︎ </span>"PRAGUE"
      </h1>
      <blockquote class="tc mt5">
           <p class="serif f5 fw1 lh-copy f1-ns dark-gray measure">
@@ -20,7 +20,8 @@
      {% for post in site.lookup %}
      <!-- <h1>{{ post.title }}</h1> -->
      <div>
-          <a class="db link dim w-50 w-25-l fl">
+          
+          <a class="db link dim w-50 w-25-l fl" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
                <img class="db w-100" src="{{ site.baseurl }}{{ post.img }}">
           </a>
      </div>
