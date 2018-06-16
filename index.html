@@ -1,29 +1,27 @@
----
-layout: default
+--- 
+layout: default 
 ---
 
 <section class="center mw7">
-  <article>
-    {% for post in site.lookup limit: 1 %}
-       <h1>{{ post.title }}</h1>
-      {{ post.content }}
-    {% endfor %}
-  </article>
-  <section>
-    <article>
-      <ul>
-        {% for post in paginator.posts %}
-          <li>
-            <a href="{{ post.url }}" title="{{post.title}}">
-              <date datetime="{{post.date}}">
-                {{ post.date | date_to_long_string }}
-              </date>
-              {{ post.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-      <p>...</a></p>
-    </article>
-  </section>
+     <article>
+          {% for post in site.lookup limit: 1 %}
+          <h1>{{ post.title }}</h1>
+          {{ post.content }} {% endfor %}
+     </article>
+
+
+     <article>
+
+          <a class="link dim black b f3 f-headline-ns tc db mb3 mb4-ns" href="{{site.baseurl}}" title="Projects">Projects</a>
+          <div class="tc">
+               <ul class="list pl0">
+                    <li>
+                         <a class="link dim gray f4 f4-ns dib mr3" href="{{site.baseurl}}/lookup" title="LOOK UP PRAGUE">LOOK UP PRAGUE</a>
+                    </li>
+
+               </ul>
+          </div>
+
+     </article>
+
 </section>
