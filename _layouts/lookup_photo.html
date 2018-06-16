@@ -1,9 +1,30 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  {% include _head.html %}
+<body>
+          {% include lookup/_navigation.html %}
 
-{% for post in site.lookup limit: 1 %}
-<h1>{{ post.title }}</h1>
-{{ post.content }}
-{% endfor %}
-</article>
+  <article class="vh-100 dt w-100 ">
+          <div class="dtc v-mid tc white ph3 ph4-l">
+                    {{content}}
+                    
+          </div>
+     </article>
+     <article class="vh-100 dt w-100 h-25">
+               <div class="dtc v-mid tc white ph3 ph4-l measure-wide">
+
+                    <div class="tc pv4 v-mid">
+                         <h4><a href="{{ site.url }}/lookup" title="sebastianpatron" class="f3 link db black ttu">{{page.title}}</a></h4>
+
+                         <p class="f4 black "> {{page.author}} </p>
+
+                         <p class="f6 black ">{{page.description}}</p>
+                    </div>
+               </div>
+          </article>
+
+  {% include _footer.html %}
+</body>
+</html>
+
+
