@@ -27,4 +27,19 @@ permalink: pretty
 # UnComment once you have pygments installed. Used for code syntax highlighting.
 #pygments: true
 
+
+# Includes
+include: ['_pages']
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+collections:
+  lookup:
+    defaults:
+      layout: lookup_photo
+    output: true
+    permalink: /lookup/:path/
+
 exclude: [Rakefile]
+
+

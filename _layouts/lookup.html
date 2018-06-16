@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include _head.html %}
+<header class="pv5 pv6-ns">
+     <h1 class="mt0 ptl tc f6 f3-ns fw9 dark-gr⬆︎ay">
+          <span class="fw1">LOOK ⬆︎ PRAGUE</span>
+     </h1>
+     <blockquote class="tc mt5">
+          <p class="serif f5 fw1 lh-copy f1-ns dark-gray measure">
+               <em>Stranger. But I mean not only three names, but Three Dimensions.</em>
+          </p>
+          <small class="gray">— Edwin A. Abbot</small>
+     </blockquote>⬆︎
+
+</header>
+
+<main>
+     <!-- for each post place them -->
+     {% for post in site.lookup %}
+     <!-- <h1>{{ post.title }}</h1> -->
+     <div>
+          <a class="db link dim w-50 w-25-l fl">
+               <img class="db w-100" src="{{ site.baseurl }}{{ post.img }}">
+          </a>
+     </div>
+     {% endfor %}
+</main>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% include _footer.html %}
+{% include _google_analytics.html %}
+</html>
