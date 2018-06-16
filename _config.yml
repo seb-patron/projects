@@ -8,7 +8,7 @@ author: "mrmrs"
 
 #url: http://
 url: http:///sebastianpatron.com
-baseur: '/projects/'
+baseurl: '/projects_showcase'
 
 # Your UA tracking number (i.e 35858753-1) for Google Analytics.
 # If you comment this out, or don't fill out this parameter - Google analytics won't be included.
