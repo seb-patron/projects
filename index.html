@@ -1,23 +1,29 @@
 --- 
 layout: default 
 ---
+<!-- lets get a random post to display on the main page -->
+<!-- this "random" post is only changed everytime the site is re generated -->
+{% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
 
-<section class="center mw7">
-     <article>
-          {% for post in site.lookup limit: 1 %}
-          <h1>{{ post.title }}</h1>
-          {{ post.content }} {% endfor %}
+<section class="center mw6">
+     <article class="vh-100 dt w-100 center">
+          <!-- {% for post in site.posts limit: 12 %} -->
+          <p><a class="link dim black normal f8 f-headline-ns tc db mb3 mb4-ns" href="{{site.baseurl}}{{ site.posts[random].url }}">{{ site.posts[random].title }}</a></p>
+          <img class="center" src="{{site.baseurl}}{{ site.posts[random].img }}">
+          <!-- {% endfor %} -->
      </article>
 
 
-     <article>
+     <article class="">
 
-          <a class="link dim black b f3 f-headline-ns tc db mb3 mb4-ns" href="{{site.baseurl}}" title="Projects">Projects</a>
+          <a class="link dim black b f3 f-headline-ns tc db mb3 mb4-ns tr" href="{{site.baseurl}}" title="Projects">Projects</a>
           <div class="tc">
-               <ul class="list pl0">
+               <ul class="list pl0 center">
+                         {% for post in site.posts limit: 12 %}
                     <li>
-                         <a class="link dim gray f4 f4-ns dib mr3" href="{{site.baseurl}}/lookup" title="LOOK UP PRAGUE">LOOK UP PRAGUE</a>
+                         <a class="link dim gray f4 f4-ns dib mr3 tl" href="{{site.baseurl}}{{post.url}}" title="{{ post.title }}">{{ post.title }}</a>
                     </li>
+                    {% endfor %}
 
                </ul>
           </div>
