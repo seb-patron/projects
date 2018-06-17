@@ -4,11 +4,13 @@ name: "Projects"
 descripiton: "Light-weight scaffolding for a Jekyll project with Tachyons"
 
 # Owner (organization or individual) of site content
-author: "mrmrs"
+author: "sebastian patron"
 
 #url: http://
 url: http:///sebastianpatron.com
 baseurl: '/projects_showcase'
+
+permalink: /:posts/:title/
 
 # email for contacting
 email: sebastian.patrones@gmail.com
@@ -32,7 +34,7 @@ permalink: pretty
 
 
 # Includes
-include: ['_pages']
+# include: ['_pages']
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
@@ -42,6 +44,14 @@ collections:
       layout: lookup_photo
     output: true
     permalink: /lookup/:path/
+  hey:
+    output: true
+    permalink: /hey/:path/
+  mainpages:
+    defaults:
+      layout: default
+    output: true
+    permalink: /page/:path/
 
 exclude: [Rakefile]
 
