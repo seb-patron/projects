@@ -1,0 +1,56 @@
+---
+title: Look UP PRAGUE
+layout: 
+author: Sebastian
+img: /img/lookup/lookup-2.jpg
+permalink: /lookup/
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include _head.html %}
+<header class="pv5 pv6-ns">
+     <h1 class="mt0 ptl tc f6 f3-ns fw9 dark-gray ">
+          <span class="fw1 normal">LOOK UP ⬆︎ </span>PRAGUE
+     </h1>
+     <blockquote class="tc mt5">
+          <p class="serif f5 fw1 lh-copy f1-ns dark-gray measure">
+               <em>The ancient splendor and beauty of Prague, a city beyond compare, left an impression on my imagination that will never fade</em>
+          </p>
+          <small class="gray">— Richard Wagner</small>
+     </blockquote>
+<div class="w-50 tc bt center">
+     <p class=" mt5 serif fw1 lh-copy f3 dark-gray measure">
+          About this Project
+     </p>
+
+     <p class=" mt5 serif fw1 lh-copy f5 dark-gray measure">
+               Prague is a beautiful city. Everywhere you look awe inspiring architecture dominates the skyline.
+               The people of Prague however, choose to always look down at the ground. This project is meant to
+               celebrate the beauty of the skys and architecture of Prague, and remind those around to always look up.
+               All photos were taken with a Ricoh GR II and developed in Lightroom.
+          </p>
+</div>
+</header>
+
+<main>
+     <!-- for each post place them -->
+     {% for post in site.lookup %}
+     <!-- <h1>{{ post.title }}</h1> -->
+     <div>
+          
+          <a class="db link dim w-50 w-25-l fl" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+               <img class="db w-100" src="{{ site.baseurl }}{{ post.img }}">
+          </a>
+     </div>
+     {% endfor %}
+</main>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% include _footer.html %}
+{% include _google_analytics.html %}
+</html>
