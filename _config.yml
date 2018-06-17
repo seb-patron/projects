@@ -8,7 +8,7 @@ author: "sebastian patron"
 
 #url: http://
 url: http:///sebastianpatron.com
-baseurl: '/projects_showcase'
+baseurl: '/projects'
 
 permalink: /:posts/:title/
 
