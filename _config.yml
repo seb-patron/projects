@@ -44,14 +44,6 @@ collections:
       layout: lookup_photo
     output: true
     permalink: /lookup/:path/
-  hey:
-    output: true
-    permalink: /hey/:path/
-  mainpages:
-    defaults:
-      layout: default
-    output: true
-    permalink: /page/:path/
 
 exclude: [Rakefile]
 
