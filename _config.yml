@@ -7,7 +7,7 @@ descripiton: "Light-weight scaffolding for a Jekyll project with Tachyons"
 author: "sebastian patron"
 
 #url: http://
-url: https:///sebastianpatron.com
+url: https://sebpatron.com
 baseurl: '/projects'
 
 permalink: /:posts/:title/
